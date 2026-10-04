@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rclone backup</title>
+<style>
+  :root { --bg: #f5f7f9; --text: #1c2a39; --muted: #5b6b7a; --line: #d6dde3; --accent: #2f6f73; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #151c23; --text: #e4eaf0; --muted: #9aa9b7; --line: #2e3b48; --accent: #6fb3b6; }
+  }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 1.0625rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem 2rem; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 1rem; }
+  h2 { font-size: 1.2rem; margin: 2.5rem 0 0.5rem; }
+  p { margin: 0 0 1rem; }
+  .lead { font-size: 1.15rem; color: var(--muted); }
+  a { color: var(--accent); }
+  code { font-size: 0.95em; }
+  footer {
+    max-width: 40rem; margin: 2rem auto 0; padding: 1.5rem 1.5rem 3rem;
+    border-top: 1px solid var(--line); font-size: 0.92rem; color: var(--muted);
+  }
+  footer a { margin-right: 1.25rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>rclone backup</h1>
+  <p class="lead">A private application used by one person to store nightly backups of a home server in their own Google Drive.</p>
+
+  <h2>What it does</h2>
+  <p>Every night, a scheduled job on a self-hosted Raspberry Pi creates a compressed backup archive. The open-source tool <a href="https://rclone.org/">rclone</a> uploads it to a dedicated folder in the owner's Google Drive. Archives older than 30 days are deleted automatically.</p>
+
+  <h2>Access and data</h2>
+  <p>The application requests only the <code>drive.file</code> permission, so it can access only the files it creates itself. It cannot see any other files in the Drive. It has a single user, its owner, and no data is shared with third parties.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:dvmitkov@outlook.com">dvmitkov@outlook.com</a></p>
+</main>
+<footer>
+  <a href="privacy.html">Privacy policy</a>
+  <a href="terms.html">Terms of service</a>
+</footer>
+</body>
+</html>
